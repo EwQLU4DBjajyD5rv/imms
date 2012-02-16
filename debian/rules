@@ -31,7 +31,7 @@ configure:
 	$(MAKE) configure
 configure-stamp: configure
 	dh_testdir
-	./configure --without-xmms --without-bmp --disable-immsremote
+	./configure --without-xmms --without-bmp --without-audacious --disable-immsremote
 
 	touch configure-stamp
 
@@ -75,8 +75,8 @@ install: build
 
 	# Add here commands to install the package into debian/imms.
 	$(MAKE) programs_install prefix=$(CURDIR)/debian/imms-common/usr
-	install -m 0644 -D build/libaudaciousimms.so $(CURDIR)/debian/imms-audacious`pkg-config --variable=general_plugin_dir audacious`/libaudaciousimms.so
-	ln -sf imms-common debian/imms-audacious/usr/share/doc/imms-audacious
+#	install -m 0644 -D build/libaudaciousimms.so $(CURDIR)/debian/imms-audacious`pkg-config --variable=general_plugin_dir audacious`/libaudaciousimms.so
+#	ln -sf imms-common debian/imms-audacious/usr/share/doc/imms-audacious
 
 # Build architecture-independent files here.
 binary-indep: build install
