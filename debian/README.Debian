@@ -1,0 +1,50 @@
+imms for Debian
+---------------
+
+See the bottom of this file for important information about upgrading
+from version 1.1 or older.
+
+All the documentation is on the imms web page:
+http://www.luminal.org/phpwiki/index.php/IMMS
+
+It is however a very simple plugin.  Quoting from the web page:
+
+How?
+
+The basic idea is not new. We can guess how favored a certain song is
+by keeping track of how often it was skipped. The feature that sets
+IMMS apart from other adaptive playlist management systems is complete
+transparency to the user. After the installation, IMMS quietly
+collects information in the background and uses it to help player select
+songs with no user interaction whatsoever. This feature makes IMMS
+incredibly unobtrusive and easy to use.
+
+Huh?
+
+It's quite simple, really. When you skip a song its rating is
+decreased. The lower the song's rating the less likely it is to be
+played. Songs acquire positive ratings by not being skipped. If you
+skip a few songs, the next song that will get played fully gets an
+even higher rating. In short, you don't need to worry about it. Just
+enable the plugin and continue using player normally, and IMMS will
+magically do its thing. It does, however. take a while for IMMS to
+become familiar with your listening habbits, so be patient.
+
+Upgrading from imms 1.1 or older
+________________________________
+
+As of version 1.2 imms uses sqlite3 as its backend database.  The new
+sqlite version is not backwards compatible with previous versions.  As
+a result your imms database needs to be upgraded.  This can be
+accomplished in two ways:
+- Install the sqlite and sqlite3 packages prior to running imms 2.0
+  for the first time.  If both packages are installed, imms will
+  convert your database automatically the first time you enable it.
+- Install the sqlite and sqlite3 packages, and convert the imms
+  database by hand.  Run the following command:
+  sqlite ~/.imms/imms.db .dump | sqlite3 ~/.imms/imms2.db
+
+Once your database has been converted you may remove the sqlite and
+sqlite3 packages.
+
+ -- Norbert Veber <nveber@pyre.virge.net>  Tue Apr 12 21:47:14 EDT 2005

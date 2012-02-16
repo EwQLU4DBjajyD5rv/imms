@@ -1,0 +1,20 @@
+Source: imms
+Section: utils
+Priority: optional
+Maintainer: EwQLU4DBjajyD5rv <mgfyrpuxxg3s5okh@googlemail.com>
+DM-Upload-Allowed: yes
+Standards-Version: 3.8.4
+Homepage: http://imms.luminal.org/
+Build-Depends: debhelper (>> 5.0.0), libsqlite3-dev (>=3.2.2), libpcre3-dev (>=4.3), libtag1-dev, libvorbis-dev (>=1.0), libfftw3-dev, libglib2.0-dev, zlib1g-dev, libxss-dev, libtorch3-dev, libglade2-dev, autoconf, automake, xsltproc, docbook-xsl
+
+Package: imms-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sox (>= 14.1.0), libsox-fmt-base, libsox-fmt-mp3
+Recommends: sqlite, sqlite3, imms-plugin
+Conflicts: imms
+Description: Unobtrusive, automatic, and learning playlist manager
+ IMMS is an intelligent playlist plug-in that tracks your 
+ listening patterns and dynamically adapts to your taste.
+ .
+ This package contains internal tools used by imms plugins for players.
+ It is useless without any imms-plugin

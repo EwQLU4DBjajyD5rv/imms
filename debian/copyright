@@ -1,0 +1,60 @@
+This package was debianized by Norbert Veber <nveber@pyre.virge.net> on
+Fri, 19 Sep 2003 12:23:40 -0400.
+
+The current maintainer is Artur R. Czechowski <arturcz@hell.pl>
+
+It was downloaded from http://www.luminal.org/phpwiki/index.php/IMMS
+
+Author: Michael Grigoriev <mag@luminal.org>
+
+Copyright (C) 2003-2005 Michael Grigoriev
+
+With the following exceptions:
+
+    md5.{h,c} (added ability to restrict maximum size to process)
+        from GNU textutils
+    levenshtein.{h,c} (stripped down)
+        python-Levenshtein library
+        by David Necas (Yeti) <yeti@physics.muni.cz>
+    regexx.{h,cc} (stripped down)
+        Regexx - Regular Expressions C++ solution
+        by Gustavo Niemeyer <gustavo@nn.com.br>
+    xidle.{h,cc}
+        Borrows from xautolock 2.1
+        by Michel Eyckmans (MCE) <eyckmans@imec.be>
+    normal.h
+        by by Agner Fog
+
+Other acknowledgement:
+
+    build system inspired by WvStreams 
+    by Avery Pennarun <apenwarr@nit.ca>
+    and Pierre Phaneuf <pphaneuf@nit.ca>
+
+    The beat detection algorithm is inspired by
+    SoundTouch Audio Processing Library
+    by Olli Parviainen <oparviai@iki.fi>
+
+    Special thank you to David Held for testing and ideas.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+On Debian systems, the complete text of the GNU General Public
+License, version 2, can be found in /usr/share/common-licenses/GPL-2.
+
+The Debian packaging is:
+(C) 2003, Norbert Veber <nveber@pyre.virge.net>
+(C) 2008, Artur R. Czechowski <arturcz@hell.pl>
+and is licensed under the GPL, see above.
